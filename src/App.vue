@@ -35,7 +35,7 @@ async function generateQrcode() {
     const now = new Date();
     const expirationTime = now.getTime() + (formLabelAlign.value.expireTime * 60 * 1000);
     // 构造URL
-    const url = `http://192.168.10.2:8081?expires=${expirationTime}&qrCodeUrl=${encodeURIComponent(formLabelAlign.value.linkUrl)}`;
+    const url = `https://MrHe-github-io.pages.dev?expires=${expirationTime}&qrCodeUrl=${encodeURIComponent(formLabelAlign.value.linkUrl)}`;
     try {
         const qrCode = await qrcode.toDataURL(url);
         console.log('QR Code:', url);
