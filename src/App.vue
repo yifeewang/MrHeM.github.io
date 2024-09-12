@@ -4,7 +4,7 @@
             label-position="right"
             label-width="100px"
             :model="formLabelAlign"
-            style="max-width: 460px"
+            style="max-width: 370px"
         >
             <el-form-item label="链接：">
                 <el-input v-model="formLabelAlign.linkUrl" />
@@ -12,7 +12,7 @@
             <el-form-item label="失效时间：">
                 <el-input v-model="formLabelAlign.expireTime" />
             </el-form-item>
-            <div>过期时间以分钟计数，比如填 10， 那么该二维码在10分钟后失效</div>
+            <div style="font-size: 14px;max-width: 300px; white-space: wrap;">过期时间以分钟计数，比如填 10， 那么该二维码在10分钟后失效</div>
         </el-form>
         <div class="btn">
             <el-button type="primary" @click="generateQrcode">生成二维码</el-button>
@@ -54,6 +54,7 @@ async function generateQrcode() {
     padding-top: 20vh;
     width: 100vw;
     height: 100vh;
+    color: var(--el-text-color-regular);
 }
 .btn {
     margin-top: 30px;
